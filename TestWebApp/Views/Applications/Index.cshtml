@@ -1,0 +1,51 @@
+﻿@model ApplicationsVM
+@{
+    ViewData["Title"] = "Applications";
+}
+
+<h1>Applications</h1>
+<div class='grid grid-cols-12 text-xl'>
+    <div class='flex flex-col col-span-10 col-start-2'>
+        <button type='submit'
+                class='my-4 ml-4 self-start bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600'>
+            Add New
+        </button>
+
+        <div class='h-2 bg-purple-400 rounded-t-md'></div>
+        <div class='shadow-md rounded-lg flex flex-wrap py-2 my-2 hover:bg-purple-50'>
+            
+            <div class='mx-2'></div>
+            @foreach(var obj in Model.applicationList)
+            {
+                <div class='flex basis-full'>
+                    <div class='mx-2'></div>
+                    <div class='mx-2'></div>
+                    <div class='mx-2'></div>
+                    <div class='mx-2'></div>
+                    <div class='mx-2'></div>
+                    <div class='mx-2'></div>
+                    <div class='flex cursor-pointer'>
+                        <div>Read More</div>
+                        <Image src='/down.svg'
+                           alt='Edit button'
+                           class='mx-2'
+                           width={20}
+                           height={20} />
+                    </div>
+
+                    <Image src='/trash.svg'
+                       alt='Delete button'
+                       class='mx-2 cursor-pointer'
+                       width={20}
+                       height={20} />
+                    <Image src='/edit.svg'
+                       alt='Edit button'
+                       class='mx-2'
+                       width={20}
+                       height={20} />
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

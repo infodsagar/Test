@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "BP3Acn5McQi3JNAzZ7toZGEzFcAYqwGLv+px6zMWBsfWwxFkan1o0Kxd/n4g6u7uYS7DyWlalr0I2H8qx7gSNw==",
+  "dgSpecHash": "rU6lDtaY8/izDLp7+9oOtgb8LY7bhdKvmfR7cD0wZnzGvt6+LFynYlqKCdNtFqs2zqb7XlR1gYDfhy7NkI544w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Windows 10 Pro\\Desktop\\Project\\Test\\testConsole\\testConsole.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Windows 10 Pro\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\Windows 10 Pro\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

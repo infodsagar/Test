@@ -16,3 +16,7 @@ C:\Users\Windows 10 Pro\Desktop\Project\Test\testConsole\obj\Debug\net7.0\ref\te
 C:\Users\Windows 10 Pro\Desktop\Project\Test\testConsole\obj\Debug\net7.0\testConsole.csproj.ResolveComReference.cache
 C:\Users\Windows 10 Pro\Desktop\Project\Test\testConsole\obj\Debug\net7.0\Interop.Microsoft.Office.Interop.Word.dll
 C:\Users\Windows 10 Pro\Desktop\Project\Test\testConsole\bin\Debug\net7.0\Resources\Setting.txt
+C:\Users\Windows 10 Pro\Desktop\Project\Test\testConsole\bin\Debug\net7.0\System.Management.dll
+C:\Users\Windows 10 Pro\Desktop\Project\Test\testConsole\obj\Debug\net7.0\testConsole.csproj.CopyComplete
+C:\Users\Windows 10 Pro\Desktop\Project\Test\testConsole\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\Windows 10 Pro\Desktop\Project\Test\testConsole\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Management.dll
