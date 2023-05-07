@@ -1,8 +1,11 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+/.vs
 /packages
+/TestConsole/obj
+/TestConsole/bin
 /TestForm/bin/Debug/net7.0-windows
 /TestForm/obj
 /TestService/bin

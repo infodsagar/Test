@@ -7,11 +7,16 @@ namespace TestWebApp.Models
     public class JobDesc
     {
         [Key]
-        public int Id { get; set; }
+        public int JobDescId { get; set; }
+
         [Required]
-        string JobDescription { get; set; }
+        public string JobDescription { get; set; }
+
         [ForeignKey("Application")]
-        string ApplicationId { get; set; }
+        public int? ApplicationId { get; set; }
+
+        public Application? Application { get; set; }
+
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
     }
 }

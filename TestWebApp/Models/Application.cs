@@ -2,14 +2,19 @@
 
 namespace TestWebApp.Models
 {
-    public enum SorceEnum
+    public enum SourceEnum
     {
-
+        Linkedin,
+        Seek,
     }
 
     public enum StatusEnum
     {
-
+        Applied,
+        Rejected,
+        Phone_Screen,
+        Interview,
+        Job_Offer
     }
 
     public class Application
@@ -21,8 +26,9 @@ namespace TestWebApp.Models
         [Required]
         public string Position { get; set; }
         public string URL { get; set; }
-        public SorceEnum Source { get; set; }
+        public SourceEnum Source { get; set; }
         public StatusEnum Status { get; set; }
+        public virtual JobDesc JobDesc { get; set; }
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
     }
 }

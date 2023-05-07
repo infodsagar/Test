@@ -58,18 +58,44 @@ namespace TestWebApp.Migrations
 
             modelBuilder.Entity("TestWebApp.Models.JobDesc", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("JobDescId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("JobDescId"));
+
+                    b.Property<int?>("ApplicationId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDateTime")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("Id");
+                    b.Property<string>("JobDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("JobDescId");
+
+                    b.HasIndex("ApplicationId")
+                        .IsUnique()
+                        .HasFilter("[ApplicationId] IS NOT NULL");
 
                     b.ToTable("JobDescs");
+                });
+
+            modelBuilder.Entity("TestWebApp.Models.JobDesc", b =>
+                {
+                    b.HasOne("TestWebApp.Models.Application", "Application")
+                        .WithOne("JobDesc")
+                        .HasForeignKey("TestWebApp.Models.JobDesc", "ApplicationId");
+
+                    b.Navigation("Application");
+                });
+
+            modelBuilder.Entity("TestWebApp.Models.Application", b =>
+                {
+                    b.Navigation("JobDesc")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

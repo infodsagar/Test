@@ -9,18 +9,22 @@ namespace TestWebApp.Controllers
     {
         private readonly ILogger<CreateAppController> _logger;
         public CreateAppVM createAppVM = new CreateAppVM();
-        public CreateAppController(ILogger<CreateAppController> logger) 
+        private JobTrackerDbContext _db;
+
+        public CreateAppController(ILogger<CreateAppController> logger, JobTrackerDbContext db) 
         {
             _logger = logger;
+            _db = db;
         }
 
         public IActionResult index()
         {
             createAppVM.sourceList = new List<SelectListItem>
             {
-                new SelectListItem{ Text = "Linkedin", Value="Linkedin"},
-                new SelectListItem{ Text = "Seek", Value="Seek"}
+                new SelectListItem{ Text = "Linkedin", Value=$"{SourceEnum.Linkedin}"},
+                new SelectListItem{ Text = "Seek", Value=$"{SourceEnum.Seek}"}
             };
+
 
             createAppVM.statusList = new List<SelectListItem>
             {
@@ -32,6 +36,17 @@ namespace TestWebApp.Controllers
             };
             
             return View(createAppVM);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult index(CreateAppVM obj)
+        {
+            _db.Applications.Add(obj.application);
+            _db.SaveChanges();
+            ApplicationsVM applicationsVM = new ApplicationsVM { applicationList = _db.Applications };
+            int Id = applicationsVM.applicationList.OrderByDescending(i => i.Id).First().Id;
+            return RedirectToAction("Index","CreateJD", new {Id});
         }
     }
 }
