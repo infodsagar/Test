@@ -13,3 +13,9 @@
 /TestWebApp/bin/Debug/net7.0
 /TestWebApp/node_modules
 /TestWebApp/obj
+/WebApplication1/bin/Debug/net7.0
+/WebApplication1/obj
+/.vs/ProjectEvaluation/test.metadata.v5.2
+/.vs/ProjectEvaluation/test.projects.v5.2
+/.vs/Test/DesignTimeBuild/.dtbcache.v2
+/.vs/Test/v17/.suo

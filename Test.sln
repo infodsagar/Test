@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "testConsole", "testConsole\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestService", "TestService\TestService.csproj", "{3FDA58EE-B1D0-40D0-8411-29E0D0CF1FAC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestWebApp", "TestWebApp\TestWebApp.csproj", "{909BDF10-D2BF-4B8E-9832-A889199D15B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMVC_WebApp", "TestWebApp\TestMVC_WebApp.csproj", "{909BDF10-D2BF-4B8E-9832-A889199D15B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "TestForm\TestForm.csproj", "{E605DC4F-2EF4-43DC-9E38-030A89F86CF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestForm", "TestForm\TestForm.csproj", "{E605DC4F-2EF4-43DC-9E38-030A89F86CF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
