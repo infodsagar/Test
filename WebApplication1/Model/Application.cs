@@ -20,7 +20,11 @@ namespace TestRazorWebApp.Models
     public class Application
     {
         [Key]
+<<<<<<< HEAD
         public int ApplicationId { get; set; }
+=======
+        public int Id { get; set; }
+>>>>>>> caaa3cac42f1ec332d2844f5e42ba22ea4b9538e
         [Required]
         public string Company { get; set; }
         [Required]
